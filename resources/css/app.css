@@ -1,0 +1,234 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  .py-navbar-item {
+    @apply py-6
+  }
+
+  .pt-navbar-item {
+    @apply pt-6
+  }
+
+  .pb-navbar-item {
+    @apply pb-6
+  }
+
+  .px-navbar-item {
+    @apply px-3
+  }
+
+  .pl-navbar-item {
+    @apply pl-3
+  }
+
+  .pr-navbar-item {
+    @apply pr-3
+  }
+}
+
+@layer components {
+  .btn {
+    @apply inline-flex items-center justify-center px-4 py-2 text-sm font-medium rounded-md transition-colors;
+  }
+
+  .btn-primary {
+    @apply bg-primary text-white hover:bg-primary-600 focus:ring-2 focus:ring-primary-300 focus:outline-none;
+  }
+
+  .btn-secondary {
+    @apply bg-secondary text-white hover:bg-secondary-600 focus:ring-2 focus:ring-secondary-300 focus:outline-none;
+  }
+
+  .btn-outline {
+    @apply border border-primary text-primary hover:bg-primary hover:text-white focus:ring-2 focus:ring-primary-300 focus:outline-none;
+  }
+
+  .card {
+    @apply bg-white rounded-md overflow-hidden shadow-card;
+  }
+
+}
+
+body {
+  background-color: #ffffff;
+}
+@media (max-width: 810px) {
+  .hide-under-810 {
+    display: none !important;
+  }
+}
+
+
+.wysiwyg-content > blockquote,
+.wysiwyg-content > dl,
+.wysiwyg-content > dd,
+.wysiwyg-content > h1,
+.wysiwyg-content > h2,
+.wysiwyg-content > h3,
+.wysiwyg-content > h4,
+.wysiwyg-content > h5,
+.wysiwyg-content > h6,
+.wysiwyg-content > hr,
+.wysiwyg-content > figure,
+.wysiwyg-content > p,
+.wysiwyg-content > pre {
+  margin: revert;
+}
+
+.wysiwyg-content > ol,
+.wysiwyg-content > ul {
+  list-style: revert;
+  margin: revert;
+  padding: revert;
+}
+
+.wysiwyg-content > table {
+  border-collapse: revert;
+}
+
+.wysiwyg-content > h1,
+.wysiwyg-content > h2,
+.wysiwyg-content > h3,
+.wysiwyg-content > h4,
+.wysiwyg-content > h5,
+.wysiwyg-content > h6 {
+  font-size: revert;
+  font-weight: revert;
+}
+
+.table > tbody > tr > td,
+.table > thead > tr > th {
+  padding: 0.5rem;
+}
+
+.table-sm > tbody > tr > td,
+.table-sm > thead > tr > th {
+  padding: 0.25rem;
+}
+
+.category-list > .category-item:hover > .category-list {
+  display: flex;
+}
+
+.category-list > .category-item > .category-list > .category-item > .category-list {
+  left: 100%;
+  top: 0;
+}
+
+[x-cloak] {
+  display: none;
+}
+
+body {
+  overflow-x: hidden;
+}
+
+.w-120 {
+  width: 30rem;
+}
+
+.transition-height {
+  transition-property: height;
+}
+
+.transition-visiblity {
+  transition-property: visiblity;
+}
+
+.translate-x-120 {
+  transform: translateX(100%);
+}
+
+.\-translate-x-120 {
+  transform: translateX(100%);
+}
+
+.translate-x-full {
+  transform: translateX(100%);
+}
+.-translate-x-full {
+  transform: translateX(-100%);
+}
+
+@media screen and (min-width: 768px) {
+  .md\:w-120 {
+    width: 30rem;
+  }
+  .md\:translate-x-120 {
+    transform: translateX(30rem);
+  }
+
+  .md\:\-translate-x-120 {
+    transform: translateX(-30rem);
+  }
+}
+
+input[type="number"]::-webkit-inner-spin-button,
+input[type="number"]::-webkit-outer-spin-button {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  margin: 0;
+}
+
+.pb-safe {
+  padding-bottom: env(safe-area-inset-bottom);
+}
+
+.animate-boing:hover {
+  animation: boing 300ms ease-in-out;
+}
+
+@keyframes boing {
+  15%,
+  40%,
+  75%,
+  100% {
+    transform-origin: center center;
+  }
+  15% {
+    transform: scale(1.2, 1.1);
+  }
+  40% {
+    transform: scale(0.95, 0.95);
+  }
+  75% {
+    transform: scale(1.05, 1);
+  }
+  100% {
+    transform: scale(1, 1);
+  }
+}
+
+.no-scrollbar {
+  /* Hide the scrollbar in WebKit-based browsers (Chrome, Safari, etc.) */
+  -webkit-overflow-scrolling: touch;
+}
+.no-scrollbar::-webkit-scrollbar {
+  display: none; /* for Chrome, Safari, and Opera */
+}
+
+/* Hide the scrollbar in Firefox */
+.no-scrollbar {
+  scrollbar-width: none; /* for Firefox */
+}
+
+/* Add custom smooth scrolling behavior */
+.smooth-scroll {
+  scroll-behavior: smooth;
+  transition: scroll-left 0.5s ease-in-out;
+}
+
+/* Fade-in/out animation for arrows */
+.arrow-transition {
+  transition: opacity 0.3s ease, background-opacity 0.3s ease;
+}
+/* Hide scrollbar for clean look */
+.scrollbar-hide {
+  -ms-overflow-style: none;  /* IE and Edge */
+  scrollbar-width: none;  /* Firefox */
+}
+.scrollbar-hide::-webkit-scrollbar {
+  display: none;  }
